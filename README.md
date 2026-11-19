@@ -4,7 +4,7 @@
 
 ### Installing eSim 2.5 on Ubuntu 25.04 — twelve issues found, ten fixed
 
-**FOSSEE eSim Semester Long Internship · Autumn 2026 · Screening Task 4**
+**FOSSEE eSim Winter Internship 2026 · Screening Task 4**
 
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-25.04%20plucky-E95420?logo=ubuntu&logoColor=white)](https://releases.ubuntu.com/25.04/)
 [![eSim](https://img.shields.io/badge/eSim-2.5-0A6EBD)](https://esim.fossee.in/)
@@ -13,7 +13,7 @@
 [![Dependencies](https://img.shields.io/badge/dependencies-none-success)](#design-principles)
 [![Blockers fixed](https://img.shields.io/badge/GUI%20blockers%20fixed-4%2F4-brightgreen)](#what-was-found)
 
-**Author:** Neekhil Kumar Singh · [github.com/neekhilsingh](https://github.com/neekhilsingh)
+**Author:** Neekhil Kumar Singh · [github.com/singhnk123](https://github.com/singhnk123)
 
 </div>
 
@@ -30,7 +30,7 @@ error trap, all four fail silently. This repository finds them, explains them,
 and fixes them — then proves the result actually runs.
 
 ```bash
-git clone -b installer https://github.com/neekhilsingh/eSim.git ~/eSim
+git clone -b installer https://github.com/singhnk123/eSim.git ~/eSim
 cd ~/eSim && ./install-eSim-plucky.sh
 ```
 
@@ -69,7 +69,7 @@ Full reasoning, exact error text and root-cause analysis for each: **[docs/BUGS.
 | [ISSUE-06](docs/BUGS.md#issue-06--ghdl-pulls-the-llvm-backend-1-gb--major) | `ghdl` drags in ~1 GB of LLVM | 🟠 MAJOR | NGHDL | ✅ Fixed |
 | [ISSUE-07](docs/BUGS.md#issue-07--numpy-2x-removed-legacy-aliases--major) | NumPy 2.x removed 15 aliases | 🟠 MAJOR | plotting (runtime) | ✅ Fixed |
 | [ISSUE-09](docs/BUGS.md#issue-09--sudo-makes-homeroot--major) | sudo puts `$HOME` at `/root` | 🟠 MAJOR | launcher + config | ✅ Fixed |
-| [ISSUE-11](docs/BUGS.md#issue-11--matplotlib-removed-cmregister_cmap--minor) | matplotlib dropped `cm.register_cmap` | 🟡 MINOR | plotting | ⚠️ Detected + guided |
+| [ISSUE-11](docs/BUGS.md#issue-11--matplotlib-removed-cmregister_cmap--minor) | matplotlib dropped `cm.register_cmap` / `cm.get_cmap` | 🟡 MINOR | plotting | ⚠️ Detected + guided |
 | [ISSUE-12](docs/BUGS.md#issue-12--installer-lacks-error-reporting--resume--minor) | No error trap, no resume | 🟡 MINOR | install-eSim.sh | ✅ Fixed |
 | [ISSUE-10](docs/BUGS.md#issue-10--verilator-5x-vs-ngveri--minor--reported-not-fixed) | Verilator 5.x vs NgVeri 4.x | 🟡 MINOR | NgVeri | 📋 Reported |
 
@@ -98,7 +98,7 @@ Do **not** run any of this as root — the orchestrator refuses, on purpose ([IS
 
 ```bash
 # 1. Get the code
-git clone -b installer https://github.com/neekhilsingh/eSim.git ~/eSim
+git clone -b installer https://github.com/singhnk123/eSim.git ~/eSim
 cd ~/eSim
 
 # 2. See what your machine is exposed to — read-only, changes nothing
@@ -292,7 +292,7 @@ Open **NGHDL** (or **NgVeri**) from the eSim toolbar.
 
 ## The tools
 
-Four standalone tools. Each is useful on its own and each is read-only by default.
+Five standalone tools. Each is useful on its own and each is read-only by default.
 
 | Tool | What it does | Safe by default |
 |:---|:---|:---|
@@ -412,8 +412,8 @@ during testing.
 
 <div align="center">
 
-**Neekhil Kumar Singh** · [github.com/neekhilsingh](https://github.com/neekhilsingh)
+**Neekhil Kumar Singh** · [github.com/singhnk123](https://github.com/singhnk123)
 
-Submitted for the FOSSEE eSim Semester Long Internship, Autumn 2026 · Screening Task 4
+Submitted for the FOSSEE eSim Winter Internship 2026 · Screening Task 4
 
 </div>
