@@ -132,34 +132,37 @@ straight into a bug report.
 ```
                     ./install-eSim-plucky.sh
                               │
-   ┌──────────────────────────┼──────────────────────────┐
-   │                          ▼                          │
-   │  1. preflight   esim_preflight.py                    │  read-only
-   │                 12 live probes → BLOCKER/MAJOR/MINOR │  nothing changes
-   └──────────────────────────┼──────────────────────────┘
                               ▼
-      2. deps       apt: PyQt5 · QScintilla · xcb · venv · ghdl-mcode
-                    resolves names first, so one bad name ≠ dead batch
-                              │              [ISSUE-05, 06, 08]
-                              ▼
-      3. patch      patch-installer.sh → install-eSim.sh
-                    4 anchored rewrites + a 153-line shim preamble
-                    shows you the diff and asks    [ISSUE-01,02,03,04,09,12]
+   1. preflight   esim_preflight.py                    read-only
+                  12 live probes → BLOCKER/MAJOR/MINOR
+                  nothing changes
                               │
                               ▼
-      4. install    the patched FOSSEE installer, unchanged in intent
-                    sudo primed up front so the 30-min build never stalls
+   2. deps        apt: PyQt5 · QScintilla · xcb · venv · ghdl-mcode
+                  resolves names first, so one bad name ≠ dead batch
+                  [ISSUE-05, 06, 08]
                               │
                               ▼
-      5. sources    patch_esim_sources.py → eSim's .py tree
-                    tokenizer-aware, comments and strings immune  [ISSUE-07, 11]
+   3. patch       patch-installer.sh → install-eSim.sh
+                  4 anchored rewrites + a 153-line shim preamble
+                  shows you the diff and asks
+                  [ISSUE-01,02,03,04,09,12]
                               │
                               ▼
-      6. verify     verify_esim.py
-                    real QApplication, XSPICE probe, launcher ownership
+   4. install     the patched FOSSEE installer, unchanged in intent
+                  sudo primed up front so the 30-min build never stalls
                               │
                               ▼
-                    ✅ eSim actually starts
+   5. sources     patch_esim_sources.py → eSim's .py tree
+                  tokenizer-aware, comments and strings immune
+                  [ISSUE-07, 11]
+                              │
+                              ▼
+   6. verify      verify_esim.py
+                  real QApplication, XSPICE probe, launcher ownership
+                              │
+                              ▼
+                  ✅ eSim actually starts
 ```
 
 Each stage records itself on success, so `--resume` picks up where a failure left
