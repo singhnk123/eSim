@@ -186,25 +186,7 @@ off instead of recompiling ngspice from scratch.
     <td><img src="docs/screenshots/image%209.jpeg" width="100%"/></td>
   </tr>
 </table>
----
 
-### 12 · A simulation, plotted
-
-Open any example, run **Simulation**, then **Plot Data**.
-
-<!-- Save as: docs/screenshots/12-esim-plot.png -->
-![ngspice simulation waveform plotted inside eSim](docs/screenshots/12-esim-plot.png)
-
----
-
-### 13 · NGHDL / NgVeri
-
-Open **NGHDL** (or **NgVeri**) from the eSim toolbar.
-
-<!-- Save as: docs/screenshots/13-nghdl.png -->
-![NGHDL VHDL co-simulation window](docs/screenshots/13-nghdl.png)
-
----
 
 ## The tools
 
