@@ -13,7 +13,7 @@ Every probe is independent and none of them need eSim to be running. The Qt
 check uses the offscreen platform so it works over SSH and in CI.
 
 Part of: esim-plucky-fix (FOSSEE eSim Screening Task 4, Autumn 2026)
-Author : Neekhil Kumar Singh -- https://github.com/neekhilsingh
+Author : Neekhil Kumar Singh -- https://github.com/singhnk123
 
 Requires: Python 3.8+, standard library only.
 
