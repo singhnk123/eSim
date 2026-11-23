@@ -172,107 +172,20 @@ off instead of recompiling ngspice from scratch.
 
 ## Screenshots
 
-> **Paste your captures into the slots below.** Each one names the exact command
-> that produces it. Save images to `docs/screenshots/` using the filenames shown,
-> and they will appear automatically.
-
-### 1 · The host, before anything
-
-`lsb_release -a && gcc --version && python3 --version`
-
-<!-- Save as: docs/screenshots/01-host-info.png -->
-![Ubuntu 25.04 host: release, GCC and Python versions](docs/screenshots/01-host-info.png)
-
----
-
-### 2 · Preflight: every issue this machine is exposed to
-
-`python3 scripts/esim_preflight.py`
-
-<!-- Save as: docs/screenshots/02-preflight.png -->
-![Preflight report showing BLOCKER, MAJOR and MINOR findings](docs/screenshots/02-preflight.png)
-
----
-
-### 3 · ISSUE-01 reproduced — pip refuses to install
-
-`pip3 install tabulate`
-
-<!-- Save as: docs/screenshots/03-pep668.png -->
-![error: externally-managed-environment](docs/screenshots/03-pep668.png)
-
----
-
-### 4 · ISSUE-02 reproduced — the KiCad PPA 404
-
-`sudo add-apt-repository -y ppa:kicad/kicad-8.0-releases && sudo apt-get update`
-
-<!-- Save as: docs/screenshots/04-kicad-404.png -->
-![404 Not Found / does not have a Release file for plucky](docs/screenshots/04-kicad-404.png)
-
----
-
-### 5 · ISSUE-03 reproduced — GCC 14 stops the ngspice build
-
-`cd ngspice-* && ./configure --enable-xspice && make 2>&1 | grep -m3 error:`
-
-<!-- Save as: docs/screenshots/05-gcc14-error.png -->
-![implicit declaration of function — error, not warning](docs/screenshots/05-gcc14-error.png)
-
----
-
-### 6 · The unpatched installer failing silently
-
-`./install-eSim.sh --install 2>&1 | tail -20`
-
-<!-- Save as: docs/screenshots/06-upstream-fails.png -->
-![Upstream installer printing success despite failed dependency steps](docs/screenshots/06-upstream-fails.png)
-
----
-
-### 7 · Exactly what the patch changes
-
-`./scripts/patch-installer.sh --file install-eSim.sh --dry-run`
-
-<!-- Save as: docs/screenshots/07-patch-diff.png -->
-![Unified diff of the four anchored rewrites plus the shim preamble](docs/screenshots/07-patch-diff.png)
-
----
-
-### 8 · The full run
-
-`./install-eSim-plucky.sh`
-
-<!-- Save as: docs/screenshots/08-orchestrator.png -->
-![Stage-by-stage run ending in the summary table](docs/screenshots/08-orchestrator.png)
-
----
-
-### 9 · ISSUE-07 found and fixed in eSim's own sources
-
-`python3 scripts/patch_esim_sources.py --root ~/eSim --diff`
-
-<!-- Save as: docs/screenshots/09-numpy-diff.png -->
-![NumPy alias occurrences with file, line and the proposed rewrite](docs/screenshots/09-numpy-diff.png)
-
----
-
-### 10 · Verification: it genuinely works
-
-`python3 scripts/verify_esim.py`
-
-<!-- Save as: docs/screenshots/10-verify.png -->
-![All required checks passing, including a real QApplication and XSPICE](docs/screenshots/10-verify.png)
-
----
-
-### 11 · eSim running
-
-`cd ~/eSim && python3 esim.py`
-
-<!-- Save as: docs/screenshots/11-esim-gui.png -->
-![eSim 2.5 main window on Ubuntu 25.04](docs/screenshots/11-esim-gui.png)
-
+<table>
+  <tr>
+    <td><img src="docs/screenshots/image%201.jpeg" width="100%"/></td>
+    <td><img src="docs/screenshots/image%202a.jpeg" width="100%"/></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/image%202b.jpeg" width="100%"/></td>
+    <td><img src="docs/screenshots/image%203.jpeg" width="100%"/></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/image%204.jpeg" width="100%"/></td>
+    <td><img src="docs/screenshots/image%209.jpeg" width="100%"/></td>
+  </tr>
+</table>
 ---
 
 ### 12 · A simulation, plotted
