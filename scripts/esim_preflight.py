@@ -8,7 +8,7 @@ derived from a live probe, and anything that cannot be probed is reported as
 UNKNOWN rather than guessed.
 
 Part of: esim-plucky-fix (FOSSEE eSim Screening Task 4, Autumn 2026)
-Author : Neekhil Kumar Singh -- https://github.com/neekhilsingh
+Author : Neekhil Kumar Singh -- https://github.com/singhnk123
 
 Requires: Python 3.8+, standard library only. No pip install, no root.
 
