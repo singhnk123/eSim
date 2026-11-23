@@ -12,7 +12,7 @@ what it found, with file, line number and the offending token, so the output can
 be pasted into a bug report as evidence. Nothing is modified until `--apply`.
 
 Part of: esim-plucky-fix (FOSSEE eSim Screening Task 4, Autumn 2026)
-Author : Neekhil Kumar Singh -- https://github.com/neekhilsingh
+Author : Neekhil Kumar Singh -- https://github.com/singhnk123
 
 Requires: Python 3.8+, standard library only.
 
