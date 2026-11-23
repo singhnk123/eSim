@@ -2,7 +2,7 @@
 #===============================================================================
 #         FILE: patch-installer.sh
 #      PROJECT: esim-plucky-fix -- eSim 2.5 on Ubuntu 25.04 (plucky)
-#       AUTHOR: Neekhil Kumar Singh -- https://github.com/neekhilsingh
+#       AUTHOR: Neekhil Kumar Singh -- https://github.com/singhnk123
 #
 #  Patches FOSSEE's upstream install-eSim.sh so that it completes on Ubuntu
 #  25.04. See docs/BUGS.md for the reasoning behind every individual fix.
@@ -108,7 +108,7 @@ write_preamble() {
 cat <<'PREAMBLE_EOF'
 
 # ============================ PLUCKY-FIX BEGIN ==============================
-# Injected by esim-plucky-fix -- https://github.com/neekhilsingh/eSim
+# Injected by esim-plucky-fix -- https://github.com/singhnk123/eSim
 # Ubuntu 25.04 (plucky) compatibility shims. Full rationale: docs/BUGS.md
 # Remove this block (or run `patch-installer.sh --revert`) to get upstream back.
 
