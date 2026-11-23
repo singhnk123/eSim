@@ -2,7 +2,7 @@
 #===============================================================================
 #         FILE: install-eSim-plucky.sh
 #      PROJECT: esim-plucky-fix -- eSim 2.5 on Ubuntu 25.04 (plucky)
-#       AUTHOR: Neekhil Kumar Singh -- https://github.com/neekhilsingh
+#       AUTHOR: Neekhil Kumar Singh -- https://github.com/singhnk123
 #
 #  One command that takes a stock Ubuntu 25.04 machine to a working eSim 2.5.
 #  It does not replace FOSSEE's install-eSim.sh -- it wraps it:
@@ -302,7 +302,7 @@ stage_patch() {
     if [ ! -f "$target" ]; then
         err "install-eSim.sh not found at $target"
         note "clone it first:"
-        note "  git clone -b installer https://github.com/neekhilsingh/eSim.git $ESIM_ROOT"
+        note "  git clone -b installer https://github.com/singhnk123/eSim.git $ESIM_ROOT"
         note "or point at an existing clone with --esim-root <path>"
         return 1
     fi
